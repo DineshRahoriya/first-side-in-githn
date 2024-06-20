@@ -1,0 +1,723 @@
+/* gjhfjdg */
+:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0,0,.1);
+
+}
+section{
+    padding: 2rem 9%;
+}
+
+section:nth-child(even){
+    background: #eee;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform:capitalize;
+    transition: all .2s linear;
+    letter-spacing: .05rem;
+    list-style-type:none;
+    
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+   
+}
+
+
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background-color: #fff;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+header .logo{
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+/* 
+header .logo i{
+    color: var(--green);
+    9.41
+} */
+
+header .navbar a{
+ font-size: 1.7rem;
+ border-radius: .5rem;
+ padding: .5rem 1.5rem;
+ color: var(--light-color);
+
+}
+header .navbar a.active,
+header .navbar a:hover{
+    
+    color: #fff;
+    background-color: var(--green);
+}
+
+header .icon i,
+header .icon a{
+    cursor: pointer;
+    margin-left:.5rem ;
+    height: 4.5rem;
+    line-height: 4.5rem;
+padding: 1rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+
+header .icon i:hover,
+header .icon a:hover{
+    color: #fff;
+    background: var(--green);
+    transform: rotate(360deg);
+}
+
+header .icon #list{
+    display: none;
+}
+
+#search-form{
+    position: fixed;
+    top:-110%; left: 0%;
+    height: 100% ;width: 100%;
+    z-index: 1004;
+    background: rgba(0,0,0,.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+#search-box{
+    width: 50rem;
+    border-bottom: 1px solid white;
+    padding: 1rem 0;
+    font-size: 3rem;
+     text-transform: none;
+     background: none;
+     color: white;
+}
+#search-box::placeholder{
+    color: #fff;
+}
+#search-box::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+
+#search-form label i.search-item{
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+}
+#search-form label i.search-item:hover{
+    color: rgb(9, 255, 0);
+}
+#search-form.active{
+    top: 0;
+}
+
+#close{
+    position: absolute;
+    color: #fff;
+    font-size: 3rem;
+    top: 20px;
+    right: 20px;
+    cursor: pointer; 
+}
+#close:hover{
+    color: red;
+}
+
+.home .home-slide .slide{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2re,;
+    padding-top: 9rem;
+}
+
+.home .home-slide .slide .cantent{
+    flex: 1 1 45rem;
+}
+
+
+.home .home-slide .slide .imagess{
+    flex: 1 1 45rem;
+}
+
+.home .home-slide .slide .cantent span{
+    color: var(--green);
+    font-size: 3rem;
+}
+
+.home .home-slide .slide .cantent h3{
+    color: var(--black);
+    font-size: 7rem;
+}
+
+.home .home-slide .slide .cantent p{
+    color: var(--light-color);
+    font-size: 2rem;
+    padding: 5rem 0;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    color: #fff;
+    font-size: 1.7rem;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
+}
+.imagess img{
+    height: 500px;
+    width: 500px;
+    object-fit: cover;
+}
+
+#slide{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+  }
+
+/* dishes */
+
+
+.sub-heading{
+    text-align: center;
+    color: var(--green);
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.heading{
+    text-align: center;
+    color: var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.dishes .box-continers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.dishes .box-continers .box{
+   max-width: 450px;
+   min-width:auto;
+   
+    padding: 2.5rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0,0,.3);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.dishes .box-continers .box .bi-heart-fill,
+.dishes .box-continers .box .bi-eye{
+    position: absolute;
+    top: 1.5rem;
+    background: #eee;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: var(--black);
+}
+.dishes .box-continers .box .bi-heart-fill:hover,
+.dishes .box-continers .box .bi-eye:hover{
+    background: var(--green);
+    color: #fff;
+}
+
+.dishes .box-continers .box .bi-heart-fill{
+    right: -15rem;
+}
+
+.dishes .box-continers .box .bi-eye{
+    left: -15rem;
+}
+
+.dishes .box-continers .box:hover .bi-heart-fill{
+    right: 1.5rem;
+}
+
+.dishes .box-continers .box:hover .bi-eye{
+    left: 1.5rem;
+}
+
+.dishes .box-continers .box img{
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+    object-position: center;
+}
+.dishes .box-continers .box h3{
+    color: var(--black);
+    font-size: 2rem;
+    text-transform:capitalize;
+}
+.dishes .box-continers .box .stars{
+    color: var(--green);
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+.dishes .box-continers .box span{
+    color: var(--black);
+    font-size: 1.6rem;
+}
+
+.btn1{
+  
+    display: inline-block;
+    color: #fff;
+    font-size: 1.1rem;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .7rem 2rem;
+}
+
+.btn1:hover{
+  
+    
+    background: var(--green);
+   letter-spacing: 0.1rem;
+}
+
+
+/* seen */
+
+.seen-continer{
+    background:#fff;
+    padding: 10px;
+
+}
+
+.seen-continer h3{
+   color: var(--green);
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 1rem ;
+}
+
+.seen-continer h1{
+    color: var(--black);
+     font-size: 3em;
+    text-align: center;
+     
+ }
+
+ .seen-continer .seen-cantent{
+    display: grid;
+  grid-template-columns: 50% 50%;
+    gap: 4em;
+    padding-top: 3rem;
+   align-items: center;
+   justify-content: center;
+
+ }
+
+ .seen-continer .seen-cantent img{
+  object-fit: cover;
+  object-position: center;
+ }
+
+
+.seen-items h1{
+    color: var(--black);
+    font-size: 3rem;
+  text-align: left;
+  
+ }
+
+.seen-items p{
+    color: var(--light-color);
+    font-size: 2rem;
+    line-height: 1.5em;
+    padding: 2rem 0;
+ }
+
+ .seen-button span{
+    
+    padding:18px 30px ;
+    background:rgb(236, 236, 218);
+    border-radius: 0.5rem;
+    color: #000000;
+    gap: 2rem;
+font-size: 1.4rem;
+
+ }
+
+ .seen-button span i{
+color: #05ff6d;
+font-size: 1.8rem;
+ }
+
+ .btn2{
+    display: inline-block;
+    color: #fff;
+    font-size: 1.1rem;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .7rem 2rem;
+    margin-top: 3rem;
+ }
+ .btn2:hover{ 
+    background: var(--green);
+   letter-spacing: 0.1rem;
+}
+ 
+.desgin-continer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+   gap: 1.5rem;
+}
+
+.desgin-box{
+   max-width:300px;
+   min-width: 150px;
+  
+   background: #fff;
+   padding: 10px;
+   position: relative;
+   box-shadow:0px 0px 5px 0px slategrey
+}
+
+.desgin-box a{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(0,0,0,.8);
+    padding: 8px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.5rem;
+   
+}
+
+.desgin-box a:hover{
+    background: var(--green);
+}
+
+.desgin-box img {
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+}
+
+.desgin-box .stars{
+    font-size: 1.2rem;
+    color: var(--green);
+    padding: 0.7rem 0;
+
+}
+
+.desgin-box h1{
+    font-size: 1.8rem;
+    color: var(--black);
+    text-transform: capitalize;
+}
+
+.desgin-box p{
+    padding: 0.7rem 0;
+    color: var(--light-color);
+    line-height: 1.4rem;
+}
+
+.desgin-box span{
+    font-size: 1.7rem;
+    color: var(--green);
+    margin-left: 1rem;
+    
+}
+
+
+.customer h3{
+    color: var(--green);
+     font-size: 2em;
+     text-align: center;
+     padding-bottom: 1rem ;
+     text-transform: capitalize;
+ }
+ 
+ .customer h1{
+     color: var(--black);
+      font-size: 3em;
+     text-align: center;  
+     text-transform: uppercase;
+     padding-bottom: 2rem;
+  }
+
+  .intro-continer{
+    display: flex;
+ overflow: auto;
+    gap: 3rem;
+
+  }
+
+.bio-intro{
+    
+    max-width:400px;
+    min-width: 300px;
+    border: 1px solid var(--light-color);
+    padding: 7px;
+   
+
+}
+
+.bio{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+}
+
+.bio i{
+    font-size: 3rem;
+}
+
+.bio-intro p{
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+}
+.y-name{
+    display: flex;
+    gap: 1.2rem;
+}
+
+.y-name img{
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.xstar h2{
+    text-transform: capitalize;
+    font-size: 2.0rem;
+    color: var(--black);
+}
+
+.xstar .stars i{
+    font-size: 1.5rem;
+    
+    color: var(--green);
+}
+
+.form-data h3{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: var(--green);
+
+}
+
+.form-data h1{
+    font-size: 3rem;
+    text-transform:uppercase;
+    color: var(--black);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.form-box{
+    background: #fff;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 48% 49%;
+    gap: 2rem;
+}
+.form-lift form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-lift form .la-in{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-lift form .la-in input{
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: var(--black);
+    background: #eee;
+}
+
+.form-lift form .la-in textarea{
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: var(--black);
+    background: #eee;
+}
+
+.form-lift form .la-in label
+{
+    font-size: 2rem;
+    color: var(--black);
+
+}
+
+
+
+
+.form-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-right form .la-in{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-right form .la-in input{
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: var(--black);
+    background: #eee;
+}
+.form-right form .la-in textarea{
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    background: #eee;
+}
+
+.form-right form .la-in label{
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.form-box button{
+    width: 20%;
+    padding: 1rem 0.5rem;
+    background: var(--black);
+    border-radius: 0.5rem;
+    color: #fff;
+}
+
+.form-box button:hover{
+ 
+    background: var(--green);
+    
+}
+
+.section-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.location,.links,.info-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.location,.links,.info-contact h2{
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.location,.links,.info-contact li{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+
+
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 1rem 2rem ;
+    }
+}
+
+@media(max-width: 768px){
+    header .icon #list{
+        display: inline-block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100% ;left:0; right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0,0,0.2);
+        border-bottom: .1rem solid rgba(0,0,0.2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+    }
+    header .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #eee;
+    }
+}
+
